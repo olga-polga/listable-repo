@@ -7,6 +7,5 @@ management:
   security:
     enabled: false
 
-server:
-  port: 8090
+
 debug: false
