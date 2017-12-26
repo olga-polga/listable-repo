@@ -31,6 +31,10 @@ public class House {
     }
 
 
+    /**
+     * Spring Data REST API follows HATEOAS and won't expose
+     * the object's id in JSON representation. @TODO ?
+     */
     @JsonProperty ("id")
     private Long houseId;
 
