@@ -1,11 +1,27 @@
 spring:
+  jpa:
+    properties.hibernate.dialect: org.hibernate.dialect.MySQL5Dialect
+
   data:
     rest:
       base-path: /api
+
+  database: mysql
+  datasource:
+    username: root
+    
+  cloud:
+    gcp:
+      sql:
+        database-name: listable
+        instance-connection-name: listable-189821:us-east1:listable-repo-1
+        username: root
 
 management:
   security:
     enabled: false
 
+server:
+  port: 8090
 
 debug: false

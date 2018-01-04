@@ -5,13 +5,15 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class House {
 
     @Id
     @GeneratedValue
-
     private long id;
     private String address;
 
@@ -42,7 +44,11 @@ public class House {
     public Long getHouseId() {
         return id;
     }
+    @OneToMany()
+    private List<ImageUrl> pictures = new ArrayList<>();
 
-
+    public List<ImageUrl> getPictures() {
+        return pictures;
+    }
 }
 
