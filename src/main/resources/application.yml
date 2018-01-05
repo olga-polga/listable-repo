@@ -24,3 +24,7 @@ server:
   port: 8090
 
 debug: false
+
+INSTANCE_CONNECTION_NAME: listable-189821:us-east1:listable-repo-1
+database: listable
+user: root
