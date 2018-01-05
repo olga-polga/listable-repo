@@ -26,6 +26,7 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<appengine.maven.plugin>1.3.2</appengine.maven.plugin>
 	</properties>
+
     <repositories>
         <repository>
             <id>repository.spring.milestone</id>
@@ -33,6 +34,7 @@
             <url>http://repo.spring.io/milestone</url>
         </repository>
     </repositories>
+
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -44,6 +46,7 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -82,16 +85,15 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
-        <!--	<dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-jdbc</artifactId>
-            </dependency>
-             https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-gcp-starter-sql
-            <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-gcp-starter-sql</artifactId>
-            </dependency>
-    -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-gcp-starter-sql</artifactId>
+        </dependency>
+
 
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>

@@ -10,12 +10,12 @@ spring:
     rest:
       base-path: /api
 
-  cloud:
-    gcp:
-      sql:
-        database-name: listable
-        instance-connection-name: listable-189821:us-east1:listable-repo-1
-        username: root
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/listable?useSSL=false
+    username: root
+    password: Flowers101
+
 
 database: mysql
 
