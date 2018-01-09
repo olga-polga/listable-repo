@@ -27,7 +27,7 @@ public class DatabaseLoader implements CommandLineRunner {
         saved.getPictures().add(this.imageRepo.save(new ImageUrl("`https://images.unsplash.com/photo-11111")));
         saved.getPictures().add(this.imageRepo.save(new ImageUrl("`https://images.unsplash.com/photo-10101")));
         this.houseRepo.save(saved);
-        saved = this.houseRepo.save(new House("720 Paper St." ));
+        saved = this.houseRepo.save(new House("2000 Memory Lane." ));
         saved.getPictures().add(this.imageRepo.save(new ImageUrl("`https://images.unsplash.com/photo-55555")));
         saved.getPictures().add(this.imageRepo.save(new ImageUrl("`https://images.unsplash.com/photo-15151")));
         saved.getPictures().add(this.imageRepo.save(new ImageUrl("`https://images.unsplash.com/photo-50105")));
