@@ -18,6 +18,9 @@ spring:
 
 
 database: mysql
+server:
+  port: 9001
+
 
 management:
   security:
