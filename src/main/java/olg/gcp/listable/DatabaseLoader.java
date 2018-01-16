@@ -22,24 +22,21 @@ public class DatabaseLoader implements CommandLineRunner {
 
     @Override
     public void run(String... strings) throws Exception {
+        String url1 = "https://www.googleapis.com/download/storage/v1/b/listable-bucket/o/ddd2.jpg-2018-01-15-172432523?generation=1516037072356148&alt=media";
+        String url2 = "https://www.googleapis.com/download/storage/v1/b/listable-bucket/o/ddd3.jpg-2018-01-15-171429542?generation=1516036471079669&alt=media";
+        String url3 = "https://www.googleapis.com/download/storage/v1/b/listable-bucket/o/ddd1.jpg-2018-01-15-172444641?generation=1516037084415125&alt=media";
+
         House saved = null;
-        saved = this.houseRepo.save(new House("5 Privet Dr." ));
-        saved.getPictures().add(this.imageRepo.save(new ImageUrl("`https://images.unsplash.com/photo-11111")));
-        saved.getPictures().add(this.imageRepo.save(new ImageUrl("`https://images.unsplash.com/photo-10101")));
+        saved = this.houseRepo.save(new House("5 Privet Dr."));
+        saved.getPictures().add(this.imageRepo.save(new ImageUrl(url1)));
+        saved.getPictures().add(this.imageRepo.save(new ImageUrl(url2)));
+        saved.getPictures().add(this.imageRepo.save(new ImageUrl(url3)));
         this.houseRepo.save(saved);
-        saved = this.houseRepo.save(new House("720 Paper St." ));
-        saved.getPictures().add(this.imageRepo.save(new ImageUrl("`https://images.unsplash.com/photo-55555")));
-        saved.getPictures().add(this.imageRepo.save(new ImageUrl("`https://images.unsplash.com/photo-15151")));
-        saved.getPictures().add(this.imageRepo.save(new ImageUrl("`https://images.unsplash.com/photo-50105")));
-        this.houseRepo.save(saved);
-        saved = this.houseRepo.save(new House("Apt. 56B, Whitehaven Mansions" ));
-        saved.getPictures().add(this.imageRepo.save(new ImageUrl("`https://images.unsplash.com/photo-33333")));
-        saved.getPictures().add(this.imageRepo.save(new ImageUrl("`https://images.unsplash.com/photo-33030")));
-        this.houseRepo.save(saved);
-        saved = this.houseRepo.save(new House("124 Conch Street, Bikini Bottom" ));
-        saved = this.houseRepo.save(new House("Mulholland Drive, Los Angeles, CA" ));
-        saved.getPictures().add(this.imageRepo.save(new ImageUrl("`https://images.unsplash.com/photo-99999")));
-        saved.getPictures().add(this.imageRepo.save(new ImageUrl("`https://images.unsplash.com/photo-90909")));
-        this.houseRepo.save(saved);
+
+        this.houseRepo.save(new House("720 Paper St."));
+        this.houseRepo.save(new House("Apt. 56B, Whitehaven Mansions"));
+        this.houseRepo.save(new House("124 Conch Street, Bikini Bottom"));
+        this.houseRepo.save(new House("Mulholland Drive, Los Angeles, CA"));
+
     }
 }
