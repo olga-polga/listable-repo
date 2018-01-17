@@ -5,10 +5,14 @@ Using Spring Data REST
 ```
 mvn -Drun.profiles=local  spring-boot:run
 ```
-
-## Open with HAL browser:
+## Run with H2:
 ```
-http://localhost:8080/api/browser
+mvn -Drun.profiles=h2  spring-boot:run
+```
+
+## Open local instance with HAL browser:
+```
+http://localhost:9001/api/browser
 ```
 
 ## Deploy to GCP:
